@@ -3968,4 +3968,15 @@ public class SmartRefreshLayout extends ViewGroup implements RefreshLayout, Nest
     public void setRefreshcomplete(boolean refreshcomplete) {
         this.refreshcomplete = refreshcomplete;
     }
+
+
+    private OnValueChangedListener listener;
+
+    public interface OnValueChangedListener {
+        void onValueChanged();
+    }
+
+    public void setListener(OnValueChangedListener listener) {
+        this.listener = listener;
+    }
 }
